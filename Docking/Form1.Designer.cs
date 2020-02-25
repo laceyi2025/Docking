@@ -30,35 +30,114 @@
       {
          this.comboBox1 = new System.Windows.Forms.ComboBox();
          this.textBox1 = new System.Windows.Forms.TextBox();
+         this.comboBox2 = new System.Windows.Forms.ComboBox();
+         this.label1 = new System.Windows.Forms.Label();
+         this.label2 = new System.Windows.Forms.Label();
+         this.pnlMain = new System.Windows.Forms.Panel();
+         this.pnlLeft = new System.Windows.Forms.Panel();
+         this.pnlRight = new System.Windows.Forms.Panel();
+         this.pnlMain.SuspendLayout();
+         this.pnlLeft.SuspendLayout();
+         this.pnlRight.SuspendLayout();
          this.SuspendLayout();
          // 
          // comboBox1
          // 
+         this.comboBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
          this.comboBox1.FormattingEnabled = true;
-         this.comboBox1.Location = new System.Drawing.Point(12, 12);
+         this.comboBox1.Location = new System.Drawing.Point(0, 23);
          this.comboBox1.Name = "comboBox1";
-         this.comboBox1.Size = new System.Drawing.Size(394, 21);
+         this.comboBox1.Size = new System.Drawing.Size(220, 21);
          this.comboBox1.TabIndex = 0;
          // 
          // textBox1
          // 
-         this.textBox1.Location = new System.Drawing.Point(12, 39);
+         this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+         this.textBox1.Location = new System.Drawing.Point(0, 0);
          this.textBox1.Multiline = true;
          this.textBox1.Name = "textBox1";
          this.textBox1.ReadOnly = true;
          this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-         this.textBox1.Size = new System.Drawing.Size(394, 417);
+         this.textBox1.Size = new System.Drawing.Size(489, 630);
          this.textBox1.TabIndex = 1;
+         // 
+         // comboBox2
+         // 
+         this.comboBox2.Dock = System.Windows.Forms.DockStyle.Bottom;
+         this.comboBox2.FormattingEnabled = true;
+         this.comboBox2.Location = new System.Drawing.Point(0, 23);
+         this.comboBox2.Name = "comboBox2";
+         this.comboBox2.Size = new System.Drawing.Size(269, 21);
+         this.comboBox2.TabIndex = 2;
+         // 
+         // label1
+         // 
+         this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+         this.label1.Dock = System.Windows.Forms.DockStyle.Top;
+         this.label1.Location = new System.Drawing.Point(0, 0);
+         this.label1.Name = "label1";
+         this.label1.Size = new System.Drawing.Size(220, 23);
+         this.label1.TabIndex = 3;
+         this.label1.Text = "Combo Box1";
+         this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+         // 
+         // label2
+         // 
+         this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+         this.label2.Dock = System.Windows.Forms.DockStyle.Top;
+         this.label2.Location = new System.Drawing.Point(0, 0);
+         this.label2.Name = "label2";
+         this.label2.Size = new System.Drawing.Size(269, 23);
+         this.label2.TabIndex = 4;
+         this.label2.Text = "Combo Box2";
+         this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+         // 
+         // pnlMain
+         // 
+         this.pnlMain.BackColor = System.Drawing.Color.Black;
+         this.pnlMain.Controls.Add(this.pnlRight);
+         this.pnlMain.Controls.Add(this.pnlLeft);
+         this.pnlMain.Dock = System.Windows.Forms.DockStyle.Top;
+         this.pnlMain.Location = new System.Drawing.Point(0, 0);
+         this.pnlMain.Name = "pnlMain";
+         this.pnlMain.Size = new System.Drawing.Size(489, 44);
+         this.pnlMain.TabIndex = 5;
+         // 
+         // pnlLeft
+         // 
+         this.pnlLeft.BackColor = System.Drawing.Color.Gray;
+         this.pnlLeft.Controls.Add(this.label1);
+         this.pnlLeft.Controls.Add(this.comboBox1);
+         this.pnlLeft.Dock = System.Windows.Forms.DockStyle.Left;
+         this.pnlLeft.Location = new System.Drawing.Point(0, 0);
+         this.pnlLeft.Name = "pnlLeft";
+         this.pnlLeft.Size = new System.Drawing.Size(220, 44);
+         this.pnlLeft.TabIndex = 6;
+         // 
+         // pnlRight
+         // 
+         this.pnlRight.BackColor = System.Drawing.Color.LightGray;
+         this.pnlRight.Controls.Add(this.label2);
+         this.pnlRight.Controls.Add(this.comboBox2);
+         this.pnlRight.Dock = System.Windows.Forms.DockStyle.Right;
+         this.pnlRight.Location = new System.Drawing.Point(220, 0);
+         this.pnlRight.Name = "pnlRight";
+         this.pnlRight.Size = new System.Drawing.Size(269, 44);
+         this.pnlRight.TabIndex = 7;
          // 
          // Form1
          // 
          this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
          this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-         this.ClientSize = new System.Drawing.Size(418, 466);
+         this.ClientSize = new System.Drawing.Size(489, 630);
+         this.Controls.Add(this.pnlMain);
          this.Controls.Add(this.textBox1);
-         this.Controls.Add(this.comboBox1);
          this.Name = "Form1";
          this.Text = "Form1";
+         this.Resize += new System.EventHandler(this.Form1_Resize);
+         this.pnlMain.ResumeLayout(false);
+         this.pnlLeft.ResumeLayout(false);
+         this.pnlRight.ResumeLayout(false);
          this.ResumeLayout(false);
          this.PerformLayout();
 
@@ -68,6 +147,12 @@
 
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel pnlMain;
+        private System.Windows.Forms.Panel pnlRight;
+        private System.Windows.Forms.Panel pnlLeft;
     }
 }
 

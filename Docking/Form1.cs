@@ -16,5 +16,20 @@ namespace Docking
       {
          InitializeComponent();
       }
-   }
+
+      private int GetPanelSize()
+      {
+         return (pnlMain.Size.Width) / 2;
+      }
+
+      private void AdjustPanelSize()
+      {
+         pnlLeft.Size = pnlRight.Size = new Size(GetPanelSize(), 44);
+      }
+
+        private void Form1_Resize(object sender, EventArgs e)
+        {
+         AdjustPanelSize();
+        }
+    }
 }
