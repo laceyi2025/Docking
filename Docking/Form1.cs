@@ -25,11 +25,14 @@ namespace Docking
       private void AdjustPanelSize()
       {
          pnlLeft.Size = pnlRight.Size = new Size(GetPanelSize(), 44);
+         pnl1Left.Size = pnl2Right.Size = new Size(GetPanelSize(), 44);
       }
 
         private void Form1_Resize(object sender, EventArgs e)
         {
          AdjustPanelSize();
         }
+
+     
     }
 }
